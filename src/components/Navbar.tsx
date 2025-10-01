@@ -75,7 +75,7 @@ export default function Navbar({ isVisible = true }: NavbarProps) {
 
             {/* Hamburger Menu Button - Enhanced with X Animation */}
             <motion.button
-              className="relative text-white p-4 rounded-xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20 transition-all duration-300 backdrop-blur-sm border border-white/10 hover:border-white/20"
+              className="relative text-white p-4 rounded-xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20 transition-all duration-300 backdrop-blur-sm border border-white/10 hover:border-white/20 cursor-pointer"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -152,7 +152,6 @@ export default function Navbar({ isVisible = true }: NavbarProps) {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 20 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
-                    whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     {item.name}
