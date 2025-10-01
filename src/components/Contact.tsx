@@ -99,7 +99,7 @@ export default function Contact() {
             viewport={{ once: true, margin: "-50px" }}
           >
             <div className="space-y-6">
-              {contactInfo.map((info) => (
+              {contactInfo.map((info, index) => (
                 <motion.a
                   key={info.href}
                   href={info.href}
@@ -109,6 +109,7 @@ export default function Contact() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{
                     duration: 0.5,
+                    delay: index * 0.2,
                     ease: [0.25, 0.46, 0.45, 0.94]
                   }}
                   viewport={{ once: true, margin: "-50px" }}
@@ -268,4 +269,3 @@ export default function Contact() {
     </section>
   );
 }
-

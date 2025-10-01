@@ -28,16 +28,16 @@ export default function Loading({ onLoadingComplete }: LoadingProps) {
     // Simulate loading progress
     const interval = setInterval(() => {
       setProgress(prev => {
-        if (prev >= 100) {
+        const newProgress = prev + Math.random() * 15;
+        if (newProgress >= 100) {
           clearInterval(interval);
-          // Delay before hiding loading screen
           setTimeout(() => {
             setIsLoading(false);
             onLoadingComplete?.();
           }, 500);
           return 100;
         }
-        return prev + Math.random() * 15;
+        return newProgress;
       });
     }, 100);
 
