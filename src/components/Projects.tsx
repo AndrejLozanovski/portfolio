@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Projects() {
   const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
@@ -128,10 +129,11 @@ export default function Projects() {
 
                   {/* Project Visual */}
                   <div className="relative h-full bg-gradient-to-br from-blue-600/30 via-indigo-600/20 to-purple-600/30 overflow-hidden">
-                    <img
+                    <Image
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                       style={{ objectPosition: 'center top' }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
