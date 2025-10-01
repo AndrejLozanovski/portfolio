@@ -103,6 +103,7 @@ export default function Contact() {
                 <motion.a
                   key={info.href}
                   href={info.href}
+                  target="_blank"
                   className="flex items-center py-3 px-2 bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
