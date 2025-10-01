@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Andrej - Frontend Developer",
+  title: "Andrej Lozanovski - Frontend Developer",
   description: "Personal portfolio of Andrej, frontend developer that likes to craft solid and scalable frontend products with great user experiences.",
   icons: {
     icon: '/favicon.svg',
