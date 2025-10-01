@@ -154,23 +154,23 @@ export default function Projects() {
                   <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-purple-900/10 to-pink-900/20 opacity-50" />
 
                   {/* Content */}
-                  <div className="relative p-6 h-full flex flex-col">
+                  <div className="relative p-4 lg:p-6 h-full flex flex-col overflow-y-auto lg:overflow-y-visible">
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-4">
+                      <h3 className="text-lg lg:text-xl font-bold text-white mb-3 lg:mb-4">
                         {project.title}
                       </h3>
-                      <p className="text-slate-300 text-sm leading-relaxed mb-6">
+                      <p className="text-slate-300 text-xs lg:text-sm leading-relaxed mb-4 lg:mb-6">
                         {project.description}
                       </p>
 
                       {/* Technologies */}
-                      <div className="mb-6">
-                        <h4 className="text-sm font-semibold text-blue-200 mb-3">Stack</h4>
-                        <div className="flex flex-wrap gap-2">
+                      <div className="mb-4 lg:mb-6">
+                        <h4 className="text-xs lg:text-sm font-semibold text-blue-200 mb-2 lg:mb-3">Stack</h4>
+                        <div className="flex flex-wrap gap-1 lg:gap-2">
                           {project.tech.map((tech) => (
                             <span
                               key={tech}
-                              className="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 rounded-full text-xs font-medium border border-blue-500/30 hover:border-blue-400/50 transition-all duration-200"
+                              className="px-2 lg:px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 rounded-full text-xs font-medium border border-blue-500/30 hover:border-blue-400/50 transition-all duration-200"
                             >
                               {tech}
                             </span>
@@ -180,10 +180,10 @@ export default function Projects() {
                     </div>
 
                     {/* Links */}
-                    <div className="flex gap-3">
+                    <div className="flex gap-2 lg:gap-3 mt-2">
                       <a
                         href={project.link}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl font-medium hover:from-blue-500 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 text-sm"
+                        className="flex-1 flex items-center justify-center gap-1 lg:gap-2 px-3 lg:px-4 py-2 lg:py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl font-medium hover:from-blue-500 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 text-xs lg:text-sm"
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => { e.stopPropagation(); setFlippedCards(prev => { const newSet = new Set(prev); newSet.delete(index); return newSet; }); }}
@@ -193,7 +193,7 @@ export default function Projects() {
                       </a>
                       <a
                         href={project.github}
-                        className="flex items-center justify-center gap-2 px-4 py-3 border-2 border-blue-500/50 text-blue-200 rounded-xl font-medium hover:border-blue-400 hover:bg-blue-500/10 transition-all duration-300 text-sm"
+                        className="flex items-center justify-center gap-1 lg:gap-2 px-3 lg:px-4 py-2 lg:py-3 border-2 border-blue-500/50 text-blue-200 rounded-xl font-medium hover:border-blue-400 hover:bg-blue-500/10 transition-all duration-300 text-xs lg:text-sm"
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => { e.stopPropagation(); setFlippedCards(prev => { const newSet = new Set(prev); newSet.delete(index); return newSet; }); }}
