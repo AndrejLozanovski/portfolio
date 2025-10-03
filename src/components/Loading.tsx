@@ -140,21 +140,6 @@ export default function Loading({ onLoadingComplete }: LoadingProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <motion.h1
-            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent"
-            animate={{
-              backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: 'linear',
-            }}
-            style={{ backgroundSize: '200% 200%' }}
-          >
-            A
-          </motion.h1>
-
           <motion.div
             className="text-lg md:text-xl text-blue-300 font-light"
             initial={{ opacity: 0 }}
