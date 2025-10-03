@@ -22,6 +22,16 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    if (!isLoadingComplete) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+  }, [isLoadingComplete]);
+
+  useEffect(() => {
+    if (!isLoadingComplete) return;
+
     const lenis = new Lenis();
 
     function raf(time: number) {
@@ -34,7 +44,7 @@ export default function Home() {
     return () => {
       lenis.destroy();
     };
-  }, []);
+  }, [isLoadingComplete]);
 
   return (
     <>
